@@ -1,0 +1,126 @@
+// Mixins
+//=======
+// = = = = Contents: = = = =//
+// 1. Grid
+// 2. Buttons
+// 3. Box Shadows
+//     A. Standard Shadows
+//     B. Top Shadows
+// = = = = = = = = = = = = =//
+
+// = = = = 1. Grid = = = = //
+//- - A. Grid Container - - //
+%grid
+  display:flex
+  felx-direction:row
+  flex-wrap:wrap
+  width:100%
+  max-width:$containerWidth
+  margin:0 auto
+
+  &.align-top
+    align-items: flex-start
+  &.align-bottom
+    align-items:flex-end
+  &.align-center
+    align-items:center
+
+  @media screen and (max-width:$bpSM)
+    width:90%
+
+// - - B. Grid Cell - - //
+%gridCell
+  flex:1
+  margin:0 $gridGutter
+
+  &:first-child
+    margin-left:0
+  &:last-child
+    margin-right:0
+
+  @media screen and (max-width:$bpSM)
+    flex: 0 0 100%
+    margin: 0
+    margin-bottom:$gridGutter
+
+// - - C. Grid Test - - //
+%gridTest
+  // This is for testing
+  background:lighten($gray06, 3%)
+
+  h3
+    padding: $spacingXS 0
+    text-indent: $spacingXS
+    background:$gray06
+    border:1px solid $borderColor
+    border-radius:$borderRadius
+    margin-bottom:$spacingBase
+
+//= = = = 2. Buttons = = = =//
+=btnBasic($varBtnBG:$btnBG, $varBtnFont:$btnFontColor, $varBtnBorder:$borderColor)
+    display:inline-block
+    margin-bottom: $spacingBase
+    height:$formHeight
+    max-height:$formHeight
+    padding:$elementPadding $spacingSM
+    color: $varBtnFont
+    font-size: $spacingXS
+    font-weight:600
+    line-height:$spacingBase
+    text-align:center
+    text-decoration:none
+    text-transform:uppercase
+    outline:none
+    cursor: pointer
+    vertical-align: middle
+    border:1px solid $borderColor
+    border-color:$varBtnBorder
+    border-radius: $borderRadius
+    box-shadow:$z1-shadow
+    background:$varBtnBG
+    &:hover
+        box-shadow:$z2-shadow
+        background:darken($varBtnBG, 10%)
+        transition: box-shadow 250ms ease-in-out, background 250ms ease-in-out
+    &:active,
+    &.selected
+        box-shadow:$z1-insetShadow
+        background:darken($varBtnBG, 15%)
+        transition: box-shadow 250ms ease-in-out, background 250ms ease-in-out
+
+// = = = = 4. Inputs = = = = //
+=inputStyle($varBGColor:white, $varBorderColor:$borderColor, $varFocusBorderColor:$action, $varFocusShaow:$action)
+  border:1px solid $varBorderColor
+  background-color:$varBGColor !important
+  &:focus
+    border-color:$varFocusBorderColor
+    box-shadow: 0 0 6px rgba($varFocusShaow,0.45)
+
+=inputState($varStateShadow:white, $varStateFocusShaow:$gray06)
+  box-shadow: 0 0 6px rgba($varStateShadow,0.45), $z1-insetShadow
+  color:$fontColor
+  &:focus
+    box-shadow: 0 0 12px rgba($varStateFocusShaow,0.60)
+
+// = = = = 5. Box Shadows = = = =//
+// SRC: http://codepen.io/goodtouch/pen/atvDw
+//-- A. Standard Shadows --//
+$z1-shadow: 0  1px  3px rgba(#000, 0.12), 0  1px  2px rgba(#000, 0.24)
+$z2-shadow: 0  3px  6px rgba(#000, 0.16), 0  3px  6px rgba(#000, 0.23)
+$z3-shadow: 0 10px 20px rgba(#000, 0.19), 0  6px  6px rgba(#000, 0.23)
+$z4-shadow: 0 14px 28px rgba(#000, 0.25), 0 10px 10px rgba(#000, 0.22)
+$z5-shadow: 0 19px 38px rgba(#000, 0.30), 0 15px 12px rgba(#000, 0.22)
+
+//-- B. Top shadows --//
+$top-z1-shadow: 0  -1px  3px rgba(#000, 0.12), 0  -1px  2px rgba(#000, 0.24)
+$top-z2-shadow: 0  -3px  6px rgba(#000, 0.16), 0  -3px  6px rgba(#000, 0.23)
+$top-z3-shadow: 0 -10px 20px rgba(#000, 0.19), 0  -6px  6px rgba(#000, 0.23)
+$top-z4-shadow: 0 -14px 28px rgba(#000, 0.25), 0 -10px 10px rgba(#000, 0.22)
+$top-z5-shadow: 0 -19px 38px rgba(#000, 0.30), 0 -15px 12px rgba(#000, 0.22)
+
+//-- C. Inset Shadows --//
+$z1-insetShadow: inset 0  1px  3px rgba(#000, 0.12), inset 0  1px  2px rgba(#000, 0.24)
+$z2-insetShadow: inset 0  3px  6px rgba(#000, 0.16), inset 0  3px  6px rgba(#000, 0.23)
+$z3-insetShadow: inset 0 10px 20px rgba(#000, 0.19), inset 0  6px  6px rgba(#000, 0.23)
+$z4-insetShadow: inset 0 14px 28px rgba(#000, 0.25), inset 0 10px 10px rgba(#000, 0.22)
+$z5-insetShadow: inset 0 19px 38px rgba(#000, 0.30), inset 0 15px 12px rgba(#000, 0.22)

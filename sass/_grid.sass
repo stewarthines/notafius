@@ -1,0 +1,72 @@
+// Flex Grid
+//==========
+// Stewart Hines | October 2015
+// Based off of Solved by Flexbox
+// Right Now, Grids should be in a block-full
+
+// = = = = 1. Basic Grid Container = = = = //
+.grid,
+
+  @extend %grid
+
+.grid.test
+  @extend %gridTest
+
+// = = = = 2. Grid Cells = = = = //
+
+// - - 2.A Auto Flex Cell - - //
+.grid-cell,
+%gridCell
+  @extend %gridCell
+
+// - - 2.B Cell Fourth - - //
+.grid-fourth,
+%gridFourth
+  @extend %gridCell
+  flex: 0 0 22.9%
+
+// - - 2.C Cell Third - - //
+.grid-third,
+%gridThird
+  @extend %gridCell
+  flex: 0 0 31.45%
+
+// - - 2.D Cell Half - - //
+.grid-half,
+%gridHalf
+  @extend %gridCell
+  flex: 0 0 48.6%
+
+// - - 2.E Cell Two Thirds - - //
+.grid-two-thirds,
+%gridTwoThirds
+  @extend %gridCell
+  flex: 0 0 65.6666%
+
+// - - 2.F Cell Three Fourths - - //
+.grid-three-fourths,
+%gridThreeFourths
+  @extend %gridCell
+  flex:0 0 74.3%
+
+// - - 2.G Cell Full - - //
+.grid-full,
+%gridFull
+  @extend %gridCell
+  flex: 0 0 100%
+
+// = = = = 3. Media Queries = = = = //
+
+// - - 3.A Small Devices - - //
+@media screen and (max-width:$bpSM)
+
+  .gird-cell,
+  .grid-fourth,
+  .grid-third,
+  .grid-half,
+  .grid-two-thirds,
+  .grid-three-fourths,
+  .grid-full
+    flex:0 0 100%
+
+// - - 3.B Medium Devices - - //

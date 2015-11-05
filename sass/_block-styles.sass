@@ -1,0 +1,45 @@
+// Block Styles
+//=============
+// Styles for the blocks.
+
+=blockStyle($varBG:$bodyBG,$varColor:$fontColor,$varBorderColor:$borderColor)
+  background:$varBG
+  color:$varColor
+  border-bottom-width: 1px
+  border-bottom-style: solid
+  border-color:$varBorderColor
+
+// = = = = 1. BLock Styles = = = = //
+// - - A. Default - -//
+.block
+  +blockStyle()
+// - - B. Background Brand - - //
+.block.brand
+  +blockStyle($brandBase,white,transparent)
+  border:none
+// - - C. Background Brand Alt - - //
+.block.brand-alt
+    +blockStyle($brandAlt,$textOnAlt,transparent)
+    border:none
+// - - D. Background Gray - - //
+section.bg-gray
+    +blockStyle($gray06)
+
+//= = = = 2. Block States = = = =//
+// - - A. Action - -//
+section.action
+    +blockStyle($action,white,transparent)
+// - - B. Danger - -//
+section.danger
+  +blockStyle($danger,white,transparent)
+// - - C. Success - -//
+section.success
+    +blockStyle($success,white,transparent)
+// - - D. Warning - -//
+section.warning
+    +blockStyle($warning,white,transparent)
+
+// = = = = 3. Block Modifiers = = = = //
+
+.block.no-border
+  border:none

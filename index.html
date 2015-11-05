@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Stew's Starter Pack</title>
+  <!-- styles -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/master.css" media="screen" title="no title" charset="utf-8">
+  <!-- /styles -->
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="scripts/webpage.js"></script>
+  <script src="scripts/tabs.js"></script>
+  <!-- /scripts -->
+  <!-- Favicons -->
+  <link rel="icon" type="img" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="img" sizes="96x96" href="img/favicon/favicon-96x96.png">
+  <link rel="icon" type="img" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <!-- /Favicons -->
+</head>
+
+<body ng-controller="webPageController">
+  <!-- Global header -->
+  <header class="fixed" role="banner">
+    <nav role="navigation">
+      <div class="brand">
+        <h1><a href="/">Stew's Starter Pack</a></h1>
+      </div>
+      <div class="menu" ng-click="showMobileMenu=!showMobileMenu">
+        <div class="mobile-menu">
+          <i class="material-icons">menu</i>
+        </div>
+        <ul ng-class="{'show' : showMobileMenu }">
+          <li><a href="#">Product</a></li>
+          <li class="divder"> | </li>
+          <li><a href="#">About</a></li>
+          <li class="divder"> | </li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- /Global Header -->
+  <main class="fixed-header" role="main">
+    <!-- Grid -->
+    <section class="block full">
+      <header>
+        <h1>Flex Grid</h1>
+      </header>
+      <article>
+        <div class="grid test">
+          <div class="grid-cell">
+            <h3>Grid Cell (auto)</h3>
+          </div>
+          <div class="grid-cell">
+            <h3>Grid Cell (auto)</h3>
+          </div>
+        </div>
+        <div class="grid test">
+          <div class="grid-full">
+            <h3>Full Grid</h3>
+          </div>
+        </div>
+        <div class="grid test">
+          <div class="grid-half">
+            <h3>Half</h3>
+          </div>
+          <div class="grid-half">
+            <h3>Half</h3>
+          </div>
+        </div>
+        <div class="grid test">
+          <div class="grid-third">
+            <h3>Third</h3>
+          </div>
+          <div class="grid-third">
+            <h3>Third</h3>
+          </div>
+          <div class="grid-third">
+            <h3>Third</h3>
+          </div>
+        </div>
+        <div class="grid test">
+          <div class="grid-fourth">
+            <h3>Grid Fourth</h3>
+          </div>
+          <div class="grid-fourth">
+            <h3>Grid Fourth</h3>
+          </div>
+          <div class="grid-fourth">
+            <h3>Grid Fourth</h3>
+          </div>
+          <div class="grid-fourth">
+            <h3>Grid Fourth</h3>
+          </div>
+        </div>
+        <div class="grid test">
+          <div class="grid-two-thirds">
+            <h3>Two Thirds</h3>
+          </div>
+          <div class="grid-third">
+            <h3>
+              Third
+            </h3>
+          </div>
+        </div>
+        <div class="grid test">
+          <div class="grid-three-fourths">
+            <h3>Three Fourths</h3>
+          </div>
+          <div class="grid-fourth">
+            <h3>
+              Fourth
+            </h3>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- /Grid -->
+    <!-- Typography -->
+    <section class="block full">
+      <header>
+        <h1>Typography</h1>
+        <small>Typographic Styles. Sizes & Units come from <a href="http://www.gridlover.net/app/">Gridlover.net</a></small>
+      </header>
+      <article>
+        <div class="grid">
+          <div class="grid-half">
+            <h3>Font Properties</h3>
+            <hr>
+            <script src="https://gist.github.com/stewarthines/aae1f893a28bdf0bf2b0.js"></script>
+          </div>
+          <div class="grid-cell">
+            <h3>Basic Text</h3>
+            <hr>
+            <p>
+              Pitchfork Odd Future literally, pop-up before they sold out ethical hoodie irony Carles blog keffiyeh gentrify. Shabby chic semiotics four loko street art, ethical Brooklyn Godard Pitchfork kitsch forage selfies vegan artisan butcher flannel.
+            </p>
+          </div>
+          <div class="grid-cell">
+            <h3>Links & Styled Text</h3>
+            <hr>
+            <a href="#">An href link</a>
+            <br>
+            <strong>Strong Text</strong>
+            <br>
+            <em>Emphisised Text</em>
+            <br>
+            <small>Small Text</small>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="grid-half">
+            <h3>Headings</h3>
+            <hr>
+            <h1>h1 Headline <small class="text-muted">(2.75rem | 44px)</small></h1>
+            <h2>h2 <small class="text-muted">(1.9275rem | 31px)</small></h2>
+            <h3>h3 Title - <small class="text-muted">(1.25rem | 22px)</small></h3>
+            <h4>h4 SubTitle - <small class="text-muted">(1rem | 16px)</small></h4>
+          </div>
+          <div class="grid-cell">
+            <h3>Lists</h3>
+            <hr>
+            <div class="grid">
+              <div class="grid-cell">
+                <ol>
+                  <li><strong>Ordered</strong></li>
+                  <li>list Item</li>
+                  <li>list Item</li>
+                  <li>list Item</li>
+                </ol>
+              </div>
+              <div class="grid-cell">
+                <ul>
+                  <li><strong>Unordered</strong></li>
+                  <li>list Item</li>
+                  <li>list Item</li>
+                  <li>list Item</li>
+                </ul>
+              </div>
+              <div class="grid-cell">
+                <ul class="no-style">
+                  <li><strong>No Style</strong></li>
+                  <li>list Item</li>
+                  <li>list Item</li>
+                  <li>list Item</li>
+                </ul>
+              </div>
+            </div>
+            <h3>Block Quotes</h3>
+            <hr>
+            <blockquote>
+              "This is only a quote"
+            </blockquote>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="grid-cell">
+            <h3>Text States</h3>
+            <hr>
+            <ul class="no-style">
+              <li class="text-action">Action</li>
+              <li class="text-danger">Danger</li>
+              <li class="text-success">Success</li>
+              <li class="text-warning">Warning</li>
+              <li class="text-muted">Muted</li>
+            </ul>
+          </div>
+          <div class="grid-cell">
+            <h3>Text On States</h3>
+            <hr>
+            <ul class="no-style">
+              <li class="action" style="padding:5px 0; text-indent:5px; border-radius:4px; margin-top:12px">Text on Action</li>
+              <li class="danger" style="padding:5px 0; text-indent:5px; border-radius:4px; margin-top:12px">Text on Danger</li>
+              <li class="success" style="padding:5px 0; text-indent:5px; border-radius:4px; margin-top:12px">Text on Success</li>
+              <li class="warning" style="padding:5px 0; text-indent:5px; border-radius:4px; margin-top:12px">Text on Warning</li>
+              <li class="muted" style="padding:5px 0; text-indent:5px; border-radius:4px; margin-top:12px">Text on Gray BG</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <footer>
+        <small>Full Block Footer</small>
+      </footer>
+    </section>
+    <!-- /Typography -->
+    <!-- Block Half -->
+    <section class="block">
+      <header>
+        <h1>Buttons & Inputs</h1>
+        <small>Buttons, inputs, textareas, and various form elements.</small>
+      </header>
+      <article>
+        <div class="grid">
+          <div class="grid-cell">
+            <h3>Buttons</h3>
+            <hr>
+            <button class="btn">Default Button</button><br>
+            <button class="btn action">Action Button</button><br>
+            <button class="btn danger">Danger Button</button><br>
+            <button class="btn success">Success Button</button><br>
+            <button class="btn warning">Warning Button</button>
+          </div>
+          <div class="grid-cell">
+            <h3>Inputs</h3>
+            <hr>
+            <input type="text" placeholder="Default Input">
+            <input class="action" type="text" placeholder="Input In Action">
+            <input class="danger" type="text" placeholder="Input With Error">
+            <input class="success" type="text" placeholder="Input With Success">
+            <input class="warning" type="text" placeholder="Input With Warning">
+            <textarea placeholder="Text Area"></textarea>
+          </div>
+          <div class="grid-cell">
+            <h3>Other Form Elements</h3>
+            <hr>
+            <select>
+              <option value="one">Option One</option>
+              <option value="one">Option Two</option>
+              <option value="one">Option Three</option>
+            </select>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- /Block Half -->
+  </main>
+  <footer role="footer">
+    <p>This is the footer</p>
+  </footer>
+</body>
+
+</html>

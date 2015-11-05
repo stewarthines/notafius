@@ -1,0 +1,43 @@
+// Basic Block Grid
+//=================
+// Stewart Hines | October 2015
+// This is a flex-based block model grid.
+// = = = = Contents: = = = =//
+// 1. Block Grid Extends
+// 2. Basic Building Blocks
+// 3. Block Types
+//     A. Full Width
+//        A.1 Centered
+//    B. Half
+//    C. Trips
+//    D. Quads
+//    E. Three Fourths
+//        E.1 Three Fourths Left
+//        E.2 Three Fourths Right
+// = = = = = = = = = = = = =//
+
+// = = = = 1. Block Grid Extends = = = = //
+%block
+  position: relative
+  z-index: 100
+  display:flex
+  flex-direction: row
+  flex-wrap: wrap
+  width:100%
+  padding: $spacingLG 0
+
+
+%blockContainer
+  @extend %grid
+
+// = = = = 2. Basic Building Block = = = =//
+.block
+  @extend %block
+  header,
+  footer
+    @extend %blockContainer
+    display:block
+
+  article
+    @extend %blockContainer
+    padding:$spacingMD 0
