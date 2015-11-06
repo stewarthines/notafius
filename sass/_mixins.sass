@@ -8,6 +8,8 @@
 //     B. Top Shadows
 // = = = = = = = = = = = = =//
 
+$btnFontSize:$fontSize
+
 // = = = = 1. Grid = = = = //
 //- - A. Grid Container - - //
 %grid
@@ -64,12 +66,11 @@
     max-height:$formHeight
     padding:$elementPadding $spacingSM
     color: $varBtnFont
-    font-size: $spacingXS
+    font-size: $btnFontSize
     font-weight:600
     line-height:$spacingBase
     text-align:center
     text-decoration:none
-    text-transform:uppercase
     outline:none
     cursor: pointer
     vertical-align: middle
@@ -124,3 +125,13 @@ $z2-insetShadow: inset 0  3px  6px rgba(#000, 0.16), inset 0  3px  6px rgba(#000
 $z3-insetShadow: inset 0 10px 20px rgba(#000, 0.19), inset 0  6px  6px rgba(#000, 0.23)
 $z4-insetShadow: inset 0 14px 28px rgba(#000, 0.25), inset 0 10px 10px rgba(#000, 0.22)
 $z5-insetShadow: inset 0 19px 38px rgba(#000, 0.30), inset 0 15px 12px rgba(#000, 0.22)
+
+
+// Cards
+=card($varBG:white, $varColor:$fontColor, $varShadow:$z1-shadow, $varBorderRadius:$borderRadius)
+  display:block
+  padding:$spacingSM
+  color:$varColor
+  border-radius:$varBorderRadius
+  box-shadow:$varShadow
+  background:$varBG

@@ -25,34 +25,49 @@
 
 // = = = = 1. Basic Variables and Mixins = = = =//
 //----A. Spacing ----//
-$spacingXS: 0.875rem
-$spacingSM: 1rem
-$spacingBase: 1.5rem
-$spacingMD: 3rem
-$spacingLG: 4.5rem
-$spacingXL: 6rem
+// XS: 10px
+$spacingXS:0.625rem
+// SM: 14px
+$spacingSM:0.875rem
+// Base: 21px
+$spacingBase:1.3125rem
+// MD: 42px
+$spacingMD:2.625rem
+// LG: 64px
+$spacingLG:4rem
+// XL: 84px
+$spacingXL:5.25rem
+// XXL: 105px
+$spacingXXL:6.5625rem
 
 //---- B. Colors ----//
-//--B.1 Grays --//
-$gray94:#0f0f0f
-$gray83:#2b2b2b
-$gray72:#474747
-$gray61:#636363
-$gray50:#7f7f7f
-$gray39:#9c9c9c
-$gray28:#b8b8b8
-$gray17:#d4d4d4
-$gray06:#f0f0f0
+// -- B.1 NotaFi Grays --//
 
-//--B.2 Action Colors --//
+$gray100:#3B465A
+$gray94:#465164
+$gray83:#5C6576
+$gray72:#717988
+$gray61:#878E9A
+$gray50:#9DA2AC
+$gray39:#B3B7BF
+$gray28:#C9CCD1
+$gray17:#DEE0E3
+$gray06:#F4F4F5
+
+// -- B.2 NotaFi Colors --//
+
+$brandGrayA:#252E3C
+$brandGrayB:#1D2533
+$brandBase:#57C951
+$brandAlt:#4AAA45
+$brandDark:#2F6D2C
+
+//--B.3 Action Colors --//
 $action:#0f93f5
 $danger:#f44336
 $success:#46af4a
 $warning:#ff9800
 
-//--B.3 Brand Colors--//
-$brandBase:#334667
-$brandAlt:#a60311
 
 //----C. Positioning Extensions ----//
 // If you're going to use FLEX pull this out.
@@ -71,9 +86,10 @@ $brandAlt:#a60311
   float:left
 
 //----D. Typography Variables ----//
-$fontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif
-$fontColor: $gray72
+$fontFamily: 'Open Sans', 'Helvetica', sans-serif
+$fontColor: $gray83
 $fontSize:$spacingSM
+$fontSizeSM:0.75rem
 $borderColor: $gray17
 $borderRadius: 4px
 
@@ -91,9 +107,10 @@ body
   font-family: $fontFamily
   color:$fontColor
   font-size:$fontSize
-  font-weight:300
+  font-weight:400
   letter-spacing:0.1rem
   line-height:$spacingBase
+  background:$gray06
 
 // = = = = 3. Typography = = = = //
 
@@ -151,7 +168,7 @@ blockquote
 //--B.1 Links --//
 a
   text-decoration:none
-  font-weight:500
+  font-weight:600
   color:$action
   transition: color 250ms ease-in-out
   &:hover
@@ -172,11 +189,11 @@ ul.no-style
 //--B.3 Misc In-Line Items--//
 strong,
 %strong
-  font-weight:500
+  font-weight:800
 
 small,
 %small
-  font-size:$spacingXS
+  font-size:$fontSizeSM
 
 code,
 pre

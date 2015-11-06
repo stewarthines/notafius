@@ -12,6 +12,7 @@
 @import config
 @import mixins
 //= = = = 2. Import Basic UI Elements = = = = //
+@import type
 @import forms
 @import btns
 // = = = = 3. Basic Grid - Flex Based = = = =//
@@ -22,35 +23,11 @@
 // = = = = 4. Global Layouts = = = =//
 @import layout-header
 @import layout-footer
+// = = = = 4. NotaFi Layouts = = = =//
+@import layout-profile
+@import layout-list
+
 
 %clickable
     cursor: pointer
     font-weight: 500
-
-
-.tab-nav
-    display:flex
-    width:100%
-    background:$gray06
-
-
-.tab-link
-    @extend %clickable
-    flex: 1
-    padding:5px $spacingBase
-    color:$action
-    text-align:center
-    border-bottom:3px solid $gray17
-
-    &.active
-        font-weight:bold
-        color:darken($action, 20%)
-        border-bottom: 3px solid $action
-
-.tab
-    display:none
-    visibility: hidden
-    padding:$spacingBase 0
-    &.active
-        display:block
-        visibility: visible

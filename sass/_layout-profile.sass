@@ -1,0 +1,57 @@
+.profile-wrapper
+  position: relative
+  display:flex
+  margin:0 auto
+  margin-top:56px
+  margin-bottom:$spacingMD
+  max-width:64rem
+
+
+.profile-side
+  flex: 0 0 13.875rem
+  order:1
+  margin:$spacingBase
+  margin-left:0
+  +card
+  padding:0
+
+.profile-main
+  flex: 0 0 29.25rem
+  order:2
+  margin-right:$spacingBase
+  background:white
+  +card
+  padding:0
+  border-left:1px solid $borderColor
+  border-right:1px solid $borderColor
+  border-top-left-radius: 0
+  border-top-right-radius: 0
+
+.profile-secondary
+  padding-top:$spacingBase
+  flex: 0 0 13.875rem
+  order:3
+  .card
+    height:13.875rem
+    margin-bottom:$spacingBase
+    +card
+
+
+.profile-header
+  padding:$spacingBase
+  padding-top:$spacingMD
+  color:white
+  text-align:center
+  // text-shadow: $z1-shadow
+  background:$brandAlt
+  border-top-left-radius: $borderRadius
+  border-top-right-radius: $borderRadius
+
+  img
+    display:block
+    height:$spacingXL
+    width:$spacingXL
+    margin:0 auto
+    margin-bottom:$spacingSM
+    border-radius:50%
+    box-shadow: $z1-shadow

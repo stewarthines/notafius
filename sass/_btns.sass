@@ -9,40 +9,59 @@ a.btn,
 button,
 button.btn,
 input[type="submit"]
-    +btnBasic()
-    text-shadow:0 1px 1px rgba(255,255,255,.19),0 1px 1px rgba(255,255,255,1)
+  +btnBasic()
+  text-shadow:0 1px 1px rgba(255,255,255,.19),0 1px 1px rgba(255,255,255,1)
 
 .btn.action,
 a.btn.action,
 button.action,
 button.btn.action,
 input.action[type="submit"]
-    +btnBasic($action, white, darken($action,10%))
-    text-shadow:0 1px 1px rgba(0,0,0,.19),0 1px 1px rgba(0,0,0,.24)
+  +btnBasic($action, white, darken($action,10%))
+  text-shadow:0 1px 1px rgba(0,0,0,.19),0 1px 1px rgba(0,0,0,.24)
 
 .btn.danger,
 a.btn.danger,
 button.danger,
 button.btn.danger,
 input.danger[type="submit"]
-    +btnBasic($danger, white, darken($danger,10%))
-    text-shadow:$z1-shadow
+  +btnBasic($danger, white, darken($danger,10%))
+  text-shadow:$z1-shadow
 
 .btn.success,
 a.btn.success,
 button.success,
 button.btn.success,
 input.success[type="submit"]
-    +btnBasic($success, white, darken($success,10%))
-    text-shadow:$z1-shadow
+  +btnBasic($success, white, darken($success,10%))
+  text-shadow:$z1-shadow
 
 .btn.warning,
 a.btn.warning,
 button.warning,
 button.btn.warning,
 input.warning[type="submit"]
-    +btnBasic($warning, white, darken($warning,10%))
-    text-shadow:$z1-shadow
+  +btnBasic($warning, white, darken($warning,10%))
+  text-shadow:$z1-shadow
+
+
+.btn.brand,
+a.btn.brand,
+button.brand,
+button.btn.brand,
+input.brand[type="submit"]
+  +btnBasic($brandBase, $brandDark, darken($brandBase,5%))
+  text-shadow:none
+
+
+.btn.brand-alt,
+a.btn.brand-alt,
+button.brand-alt,
+button.btn.brand-alt,
+input.brand-alt[type="submit"]
+  +btnBasic($gray100, white, darken($gray100,10%))
+  text-shadow:none
+
 
 // = = = = 2. Button Icons = = = =//
 // I'm using Google's Material Icons. This will probably change per icon

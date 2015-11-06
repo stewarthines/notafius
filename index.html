@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -19,9 +19,12 @@
   <link rel="icon" type="img" sizes="96x96" href="img/favicon/favicon-96x96.png">
   <link rel="icon" type="img" sizes="16x16" href="img/favicon/favicon-16x16.png">
   <!-- /Favicons -->
+  <!-- Open Sans Font -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+  <!-- /Open Sans -->
 </head>
 
-<body ng-controller="webPageController">
+<body>
   <!-- Global header -->
   <header class="fixed" role="banner">
     <nav role="navigation">
@@ -44,6 +47,65 @@
   </header>
   <!-- /Global Header -->
   <main class="fixed-header" role="main">
+
+
+
+    <section class="profile-wrapper">
+
+      <div class="profile-side">
+        <header class="profile-header">
+          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/orbuch/128.jpg" alt="">
+          <strong>
+            Roger Matthews
+            <br />
+            <small>Weatherford High School</small>
+          </strong>
+        </header>
+      </div>
+
+      <div class="profile-main">
+        <header class="updatebox">
+          <textarea name="" id="" cols="30" rows="10"></textarea><br>
+
+        </header>
+        <article>
+          <ul class="feed">
+
+            <li class="list-card">
+
+              <header>
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/madysondesigns/128.jpg" alt="">
+                <div class="header-content">
+                  <a href="#">Sarah Whinnem</a><br>
+                  <small>This is some more info</small>
+                </div>
+              </header>
+              <div>
+                <p>This is only a test. I'm just trying to see what this looks like. Aw Yeah!</p>
+              </div>
+              <footer>
+                  <a href="#"><i class="material-icons">reply</i></a>
+                  <a href="#"><i class="material-icons">favorite</i></a>
+              </footer>
+            </li>
+
+          </ul>
+        </article>
+      </div>
+
+      <div class="profile-secondary">
+        <div class="card">
+          <strong>Ad Space</strong>
+        </div>
+        <div class="card">
+          <strong>Ad Space</strong>
+        </div>
+      </div>
+
+    </section>
+
+
+
     <!-- Grid -->
     <section class="block full">
       <header>
@@ -155,10 +217,18 @@
           <div class="grid-half">
             <h3>Headings</h3>
             <hr>
-            <h1>h1 Headline <small class="text-muted">(2.75rem | 44px)</small></h1>
-            <h2>h2 <small class="text-muted">(1.9275rem | 31px)</small></h2>
-            <h3>h3 Title - <small class="text-muted">(1.25rem | 22px)</small></h3>
-            <h4>h4 SubTitle - <small class="text-muted">(1rem | 16px)</small></h4>
+            <h1>h1 Headline
+              <small class="text-muted">(2.75rem | 44px)</small>
+            </h1>
+            <h2>h2
+              <small class="text-muted">(1.9275rem | 31px)</small>
+            </h2>
+            <h3>h3 Title -
+              <small class="text-muted">(1.25rem | 22px)</small>
+            </h3>
+            <h4>h4 SubTitle -
+              <small class="text-muted">(1rem | 16px)</small>
+            </h4>
           </div>
           <div class="grid-cell">
             <h3>Lists</h3>
@@ -166,7 +236,9 @@
             <div class="grid">
               <div class="grid-cell">
                 <ol>
-                  <li><strong>Ordered</strong></li>
+                  <li>
+                    <strong>Ordered</strong>
+                  </li>
                   <li>list Item</li>
                   <li>list Item</li>
                   <li>list Item</li>
@@ -174,7 +246,9 @@
               </div>
               <div class="grid-cell">
                 <ul>
-                  <li><strong>Unordered</strong></li>
+                  <li>
+                    <strong>Unordered</strong>
+                  </li>
                   <li>list Item</li>
                   <li>list Item</li>
                   <li>list Item</li>
@@ -182,7 +256,9 @@
               </div>
               <div class="grid-cell">
                 <ul class="no-style">
-                  <li><strong>No Style</strong></li>
+                  <li>
+                    <strong>No Style</strong>
+                  </li>
                   <li>list Item</li>
                   <li>list Item</li>
                   <li>list Item</li>
@@ -237,11 +313,20 @@
           <div class="grid-cell">
             <h3>Buttons</h3>
             <hr>
-            <button class="btn">Default Button</button><br>
-            <button class="btn action">Action Button</button><br>
-            <button class="btn danger">Danger Button</button><br>
-            <button class="btn success">Success Button</button><br>
+            <button class="btn">Default Button</button>
+            <br>
+            <button class="btn action">Action Button</button>
+            <br>
+            <button class="btn danger">Danger Button</button>
+            <br>
+            <button class="btn success">Success Button</button>
+            <br>
             <button class="btn warning">Warning Button</button>
+            <br>
+            <button class="btn brand">Brand Base Button</button>
+            <br>
+            <button class="btn brand-alt">Brand Alt Button</button>
+            <br>
           </div>
           <div class="grid-cell">
             <h3>Inputs</h3>
