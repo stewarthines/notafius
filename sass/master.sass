@@ -11,23 +11,21 @@
 @import reset
 @import config
 @import mixins
+@import patterns
 //= = = = 2. Import Basic UI Elements = = = = //
-@import type
-@import forms
-@import btns
-// = = = = 3. Basic Grid - Flex Based = = = =//
+@import elements/type
+@import elements/forms
+@import elements/btns
+// = = = = 3. Basic Grid - Flex Based = = = = //
 @import grid
-// = = = = 3. Block Structure - Flex Based = = = =//
+// = = = = 3. Block Structure - Flex Based = = = = //
 @import blocks
 @import block-styles
-// = = = = 4. Global Layouts = = = =//
-@import layout-header
-@import layout-footer
-// = = = = 4. NotaFi Layouts = = = =//
-@import layout-profile
-@import layout-list
-
-
-%clickable
-    cursor: pointer
-    font-weight: 500
+// = = = = 4. Global Layouts = = = = //
+@import layouts/layout-header
+@import layouts/layout-footer
+// = = = = 4. NotaFi Elements = = = = //
+@import elements/elements-card
+// = = = = 5. NotaFi Layouts = = = = //
+@import layouts/layout-profile
+@import layouts/layout-list

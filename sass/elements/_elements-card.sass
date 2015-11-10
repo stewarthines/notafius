@@ -1,0 +1,73 @@
+=avatar-img($varSize:$spacingMD, $varShadow:$z1-shadow)
+  border-radius:50%
+  box-shadow:$varShadow
+  height:$varSize
+  width:$varSize
+
+=clickable()
+  cursor: pointer
+
+
+// = = = = 1. Basic Card Styles & Elements = = = = //
+.card,
+.card-list li
+  +card()
+  padding:0
+  // 1. A Card Header
+  header
+    display:flex
+    padding:$spacingSM
+    align-content: center
+    align-items: center
+
+    img
+     +avatar-img
+     flex:0 0 $spacingMD
+     margin-right:$spacingSM
+
+    .card-header-content
+      flex: auto
+  // 1.B Card Body
+  .card-body
+    padding: 0 $spacingSM
+    p
+      margin:0
+    img
+      display:block
+      width:100%
+      max-width:100%
+  // 1.C Card Footer
+  footer
+    display:flex
+    justify-content: flex-end
+    height:$spacingMD
+
+  .card-footer-btn .material-icons
+    height:$spacingMD
+    width:$spacingMD
+    line-height:$spacingMD
+    text-align:center
+    font-size:16px
+
+// = = = = 2. Card Variations = = = = //
+// - - A. Card Lists - - //
+.card-list
+  @extend .no-style
+  margin:0
+
+  li
+    border-radius:0
+    border-bottom:1px solid $borderColor
+    &:last-child
+      border-bottom-left-radius: $borderRadius
+      border-bottom-right-radius: $borderRadius
+
+// - - B. Notifications - - //
+.card-notification
+  +clickable()
+  transition:transform 150ms ease-in-out, box-shadow 150ms ease-in-out
+
+  &:hover
+    transform:scale(1.02)
+    box-shadow:$z2-shadow
+    transition:transform 150ms ease-in-out, box-shadow 150ms ease-in-out

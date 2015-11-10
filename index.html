@@ -4,15 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Stew's Starter Pack</title>
+  <title>NotaFi Styles</title>
   <!-- styles -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/master.css" media="screen" title="no title" charset="utf-8">
   <!-- /styles -->
   <!-- Scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-  <script src="scripts/webpage.js"></script>
-  <script src="scripts/tabs.js"></script>
+
   <!-- /scripts -->
   <!-- Favicons -->
   <link rel="icon" type="img" sizes="32x32" href="img/favicon/favicon-32x32.png">
@@ -29,30 +27,38 @@
   <header class="fixed" role="banner">
     <nav role="navigation">
       <div class="brand">
-        <h1><a href="/">Stew's Starter Pack</a></h1>
+        <h1>
+          <img src="img/notafi_logo_white.svg" alt="NotaFi. Get noticed">
+        </h1>
       </div>
-      <div class="menu" ng-click="showMobileMenu=!showMobileMenu">
+      <div class="menu">
         <div class="mobile-menu">
           <i class="material-icons">menu</i>
         </div>
-        <ul ng-class="{'show' : showMobileMenu }">
-          <li><a href="#">Product</a></li>
-          <li class="divder"> | </li>
-          <li><a href="#">About</a></li>
-          <li class="divder"> | </li>
-          <li><a href="#">Contact</a></li>
+        <ul>
+          <li>
+            <a href="#">
+              <img src="img/icon_search.svg" alt="Search NotaFi">
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/icon_universities.svg" alt="Find Universities">
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/icon_messages_new.svg" alt="Your Inbox">
+          </li>
+          <li><a href="#">User Name</a></li>
         </ul>
       </div>
     </nav>
   </header>
   <!-- /Global Header -->
   <main class="fixed-header" role="main">
-
-
-
+    <!-- Profile Layout -->
     <section class="profile-wrapper">
 
-      <div class="profile-side">
+      <div class="col-left">
         <header class="profile-header">
           <img src="https://s3.amazonaws.com/uifaces/faces/twitter/orbuch/128.jpg" alt="">
           <strong>
@@ -61,39 +67,80 @@
             <small>Weatherford High School</small>
           </strong>
         </header>
+        <nav>
+          <ul>
+            <li>Profile</li>
+            <li>Feed</li>
+            <li>Accademics</li>
+            <li>Activities</li>
+            <li>Events</li>
+          </ul>
+        </nav>
       </div>
 
-      <div class="profile-main">
+      <div class="col-middle">
         <header class="updatebox">
-          <textarea name="" id="" cols="30" rows="10"></textarea><br>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <br>
 
         </header>
         <article>
-          <ul class="feed">
-
-            <li class="list-card">
-
+          <ul class="card-list">
+            <li>
               <header>
                 <img src="https://s3.amazonaws.com/uifaces/faces/twitter/madysondesigns/128.jpg" alt="">
                 <div class="header-content">
-                  <a href="#">Sarah Whinnem</a><br>
+                  <a href="#">Sarah Whinnem</a>
+                  <br>
                   <small>This is some more info</small>
                 </div>
               </header>
-              <div>
-                <p>This is only a test. I'm just trying to see what this looks like. Aw Yeah!</p>
+              <div class="card-body">
+                <p>Running down to Cuba with a load of sugar, Weigh, me boys, to Cuba! Make her run you, lime juice squeezes, Running down to Cuba. O, I got a sister, she's nine feet tall, Weigh, me boys, to Cuba! Sleeps in the kitchen with her feet in the hall.Running down to Cuba.</p>
               </div>
               <footer>
-                  <a href="#"><i class="material-icons">reply</i></a>
-                  <a href="#"><i class="material-icons">favorite</i></a>
+                <div class="card-footer-btn">
+                  <i class="material-icons">reply</i>
+                </div>
+                <div class="card-footer-btn">
+                  <i class="material-icons">favorite</i>
+                </div>
               </footer>
             </li>
-
+            <li class="card-notification">
+              <header>.
+                <img src="img/icons_timeline_update.svg" alt="New Update">
+                <div class="card-header-content">
+                  <strong>Here</strong> is a single line update!
+                </div>
+              </header>
+            </li>
+            <li>
+              <header>
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/madysondesigns/128.jpg" alt="">
+                <div class="header-content">
+                  <a href="#">Sarah Whinnem</a>
+                  <br>
+                  <small>This is some more info</small>
+                </div>
+              </header>
+              <div class="card-body">
+                <img src="https://c1.staticflickr.com/1/486/19326287682_47155143c2_h.jpg" alt="Hudson">
+              </div>
+              <footer>
+                <div class="card-footer-btn">
+                  <i class="material-icons">reply</i>
+                </div>
+                <div class="card-footer-btn">
+                  <i class="material-icons">favorite</i>
+                </div>
+              </footer>
+            </li>
           </ul>
         </article>
       </div>
 
-      <div class="profile-secondary">
+      <div class="col-right">
         <div class="card">
           <strong>Ad Space</strong>
         </div>
@@ -103,13 +150,495 @@
       </div>
 
     </section>
-
-
-
-    <!-- Grid -->
-    <section class="block full">
+    <!-- /Profile Layout -->
+    <!-- Cards -->
+    <section class="block" id="cards">
       <header>
-        <h1>Flex Grid</h1>
+        <h1>Cards</h1>
+      </header>
+      <article>
+        <div class="grid spacing-md">
+          <div class="grid-half">
+            <div class="card">
+              <header>
+                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/madysondesigns/128.jpg" alt="">
+                <div class="header-content">
+                  <a href="#">Sarah Whinnem</a>
+                  <br>
+                  <small>This is some more info</small>
+                </div>
+              </header>
+              <div class="card-body">
+                <p>Running down to Cuba with a load of sugar, Weigh, me boys, to Cuba! Make her run you, lime juice squeezes, Running down to Cuba. O, I got a sister, she's nine feet tall, Weigh, me boys, to Cuba! Sleeps in the kitchen with her feet in the hall.Running down to Cuba.</p>
+              </div>
+              <footer>
+                <div class="card-footer-btn">
+                  <i class="material-icons">reply</i>
+                </div>
+                <div class="card-footer-btn">
+                  <i class="material-icons">favorite</i>
+                </div>
+              </footer>
+            </div>
+          </div>
+          <div class="grid-cell">
+            <h3>Basic Cards</h3>
+            <p>Cards have 3 zones. Headers, bodies, and footers. The header contains information about the person who is conected to the card. The body can hold a varaity of information and media. The footer is where card actions go. Unless it's a notification card. You simply click or tap those.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="grid-cell">
+            <h3>Card Lists</h3>
+            <p>A list of cards stack together to make it easier to read the content.</p>
+          </div>
+          <div class="grid-half">
+            <ul class="card-list">
+              <li>
+                <header>
+                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/madysondesigns/128.jpg" alt="">
+                  <div class="header-content">
+                    <a href="#">Sarah Whinnem</a>
+                    <br>
+                    <small>This is some more info</small>
+                  </div>
+                </header>
+                <div class="card-body">
+                  <p>Running down to Cuba with a load of sugar, Weigh, me boys, to Cuba! Make her run you, lime juice squeezes, Running down to Cuba. O, I got a sister, she's nine feet tall, Weigh, me boys, to Cuba! Sleeps in the kitchen with her feet in the hall.Running down to Cuba.</p>
+                </div>
+                <footer>
+                  <div class="card-footer-btn">
+                    <i class="material-icons">reply</i>
+                  </div>
+                  <div class="card-footer-btn">
+                    <i class="material-icons">favorite</i>
+                  </div>
+                </footer>
+              </li>
+              <li class="card-notification">
+                <header>.
+                  <img src="img/icons_timeline_update.svg" alt="New Update">
+                  <div class="card-header-content">
+                    <strong>Here</strong> is a single line update!
+                  </div>
+                </header>
+              </li>
+              <li>
+                <header>
+                  <img src="https://s3.amazonaws.com/uifaces/faces/twitter/madysondesigns/128.jpg" alt="">
+                  <div class="header-content">
+                    <a href="#">Sarah Whinnem</a>
+                    <br>
+                    <small>This is some more info</small>
+                  </div>
+                </header>
+                <div class="card-body">
+                  <img src="https://c1.staticflickr.com/1/486/19326287682_47155143c2_h.jpg" alt="Hudson">
+                </div>
+                <footer>
+                  <div class="card-footer-btn">
+                    <i class="material-icons">reply</i>
+                  </div>
+                  <div class="card-footer-btn">
+                    <i class="material-icons">favorite</i>
+                  </div>
+                </footer>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- /Cards -->
+    <!-- Colors -->
+    <section class="block text-center" id="colors">
+      <header>
+        <h1>Color Pallet</h1>
+      </header>
+      <article>
+        <h2>Shades of Gray:</h2>
+        <div class="grid spacing-base">
+          <div class="grid-cell">
+            <div class="color">
+              &nbsp;
+            </div>
+            <strong>White:</strong>
+            <br> #ffffff
+          </div>
+          <div class="grid-cell">
+            <div class="color bg-gray06">
+              &nbsp;
+            </div>
+            <strong>$gray06:</strong>
+            <br> #f4f4f4
+          </div>
+          <div class="grid-cell">
+            <div class="color bg-gray17">
+              &nbsp;
+            </div>
+            <strong>$gray17:</strong>
+            <br> #dee0e3
+          </div>
+          <div class="grid-cell">
+            <div class="color bg-gray28">
+              &nbsp;
+            </div>
+            <strong>$gray28:</strong>
+            <br> #c9ccd1
+          </div>
+          <div class="grid-cell">
+            <div class="color bg-gray39">
+              &nbsp;
+            </div>
+            <strong>$gray39:</strong>
+            <br> #b3b7bf
+          </div>
+          <div class="grid-cell">
+            <div class="color bg-gray50">
+              &nbsp;
+            </div>
+            <strong>$gray50:</strong>
+            <br> #9da2ac
+          </div>
+          <div class="grid-cell">
+            <div class="color bg-gray61">
+              &nbsp;
+            </div>
+            <strong>$gray61:</strong>
+            <br> #878e9a
+          </div>
+        </div>
+        <div class="grid spacing-base">
+          <div class="grid-cell">
+            <div class="color bg-gray72">
+              &nbsp;
+            </div>
+            <strong>$gray72:</strong>
+            <br> #717988
+          </div>
+          <div class="grid-cell">
+            <div class="color bg-gray83">
+              &nbsp;
+            </div>
+            <strong>$gray83:</strong>
+            <br> #5C6576
+          </div>
+          <div class="grid-cell">
+            <div class="color bg-gray94">
+              &nbsp;
+            </div>
+            <strong>$gray94:</strong>
+            <br> #465164
+          </div>
+          <div class="grid-cell">
+            <div class="color bg-gray100">
+              &nbsp;
+            </div>
+            <strong>$gray100:</strong>
+            <br> #3B465A
+          </div>
+          <div class="grid-cell">
+            <div class="color bg-brandGrayA">
+              &nbsp;
+            </div>
+            <strong>$brandGrayA:</strong>
+            <br> #252E3C
+          </div>
+          <div class="grid-cell">
+            <div class="color bg-brandGrayB">
+              &nbsp;
+            </div>
+            <strong>$brandGrayB:</strong>
+            <br> #1D2533
+          </div>
+        </div>
+        <h2>Brand Colors:</h2>
+        <div class="grid spacing-base">
+          <div class="grid-cell">
+            <div class="color bg-brandBase">
+              &nbsp;
+            </div>
+            <strong>$brandBase:</strong>
+            <br> #57C951
+          </div>
+          <div class="grid-cell">
+            <div class="color bg-brandAlt">
+              &nbsp;
+            </div>
+            <strong>$brandAlt:</strong>
+            <br> #4AAA45
+          </div>
+          <div class="grid-cell">
+            <div class="color bg-brandDark">
+              &nbsp;
+            </div>
+            <strong>$brandDark:</strong>
+            <br> #2F6D2C
+          </div>
+        </div>
+        <h2>State Colors</h2>
+        <div class="grid">
+          <div class="grid-cell">
+            <div class="color bg-action">
+              &nbsp;
+            </div>
+            <strong>$action:</strong>
+            <br> #0f93f5
+          </div>
+          <div class="grid-cell">
+            <div class="color bg-danger">
+              &nbsp;
+            </div>
+            <strong>$danger:</strong>
+            <br> #f44336
+          </div>
+          <div class="grid-cell">
+            <div class="color bg-success">
+              &nbsp;
+            </div>
+            <strong>$success:</strong>
+            <br> #46af4a
+          </div>
+          <div class="grid-cell">
+            <div class="color bg-warning">
+              &nbsp;
+            </div>
+            <strong>$warning:</strong>
+            <br> #ff9800
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- /Colors -->
+    <!-- Typography -->
+    <section class="block" id="typography">
+      <header>
+        <h1>Typography</h1>
+      </header>
+      <article>
+        <h2>Basic Font Properties:</h2>
+        <div class="grid">
+          <div class="grid-cell">
+            <ul class="no-style">
+              <li>
+                <strong>Font Family:</strong> 'Open Sans', 'Helvetica', sans-serif</li>
+              <li>
+                <strong>Font Size:</strong> 14px / </li>
+              <li>
+                <strong>Line Height:</strong> 21px / </li>
+              <li class="spacing-base">
+                <strong>Color:</strong> #5c6576 | $gray83</li>
+              <li class="spacing-base">
+                <strong>Paragraph:</strong> A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences.
+                Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</li>
+              <li>
+                <blockquote>
+                  <strong>Block Quote:</strong> I have a bad feeling about this
+                </blockquote>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h2>Headings:</h2>
+        <div class="grid">
+          <div class="grid-cell">
+            <ul class="no-style">
+              <li>
+                <h1>Heading One - Headline</h1>
+              </li>
+              <li>
+                <h2>Heading Two</h2>
+              </li>
+              <li>
+                <h3>Heading Three - Title</h3>
+              </li>
+              <li>
+                <h4>Heading Four - Subtitle</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h2>Inline Elements</h2>
+        <div class="grid">
+          <div class="grid-cell">
+            <ul class="no-style">
+              <li>
+                <strong>Strong text is sued to indicate strong importance</strong>
+              </li>
+              <li>
+                <em>This text has added emphasis</em>
+              </li>
+              <li><b>The B Element</b> is stlistically different text from normal text, without any special importance.</li>
+              <li>
+                The <i>I Element</i> is text that is set off from the normal text. Also used to denote Icons
+              </li>
+              <li>The <u>U element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation.</li>
+              <li>
+                <small>This is small text for fine print.</small>
+                <li>
+            </ul>
+          </div>
+        </div>
+        <h2>Time:</h2>
+        <div class="grid spacing-base">
+          <div class="grid-cell">
+            Nov 08
+          </div>
+        </div>
+        <h2>HR Divider</h2>
+        <div class="grid">
+          <div class="grid-cell">
+            <hr />
+          </div>
+        </div>
+        <h2>Lists:</h2>
+        <div class="grid">
+          <div class="grid-cell">
+            <ul>
+              <li>
+                <strong>Unordered List</strong>
+              </li>
+              <li>This is a list item in an unordered list</li>
+              <li>An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line.</li>
+              <li>Lists can be nested inside of each other
+                <ul>
+                  <li>This is a nested list item</li>
+                  <li>This is another nested list item in an unordered list</li>
+                  <li>This is a nested list item</li>
+                </ul>
+              </li>
+              <li>Yet another List Item</li>
+              <li>The very last List Item</li>
+            </ul>
+          </div>
+          <div class="grid-cell">
+            <ol>
+              <li>
+                <strong>Ordered List</strong>
+              </li>
+              <li>This is a list item in an ordered list</li>
+              <li>An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an ordered list that can wrap onto a new line.</li>
+              <li>Lists can be nested inside of each other
+                <ol>
+                  <li>This is a nested list item</li>
+                  <li>This is another nested list item in an ordered list</li>
+                  <li>This is a nested list item</li>
+                </ol>
+              </li>
+              <li>Yet another List Item</li>
+              <li>The very last List Item</li>
+            </ol>
+          </div>
+          <div class="grid-cell">
+            <ol class="no-style">
+              <li>
+                <strong>No-Style List</strong>
+              </li>
+              <li>This list has the class
+                <pre>no-style</pre> applied to it.</li>
+              <li>An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an ordered list that can wrap onto a new line.</li>
+              <li>Lists can be nested inside of each other
+                <ol>
+                  <li>This is a nested list item</li>
+                  <li>This is another nested list item in an ordered list</li>
+                  <li>This is a nested list item</li>
+                </ol>
+              </li>
+              <li>Yet another List Item</li>
+              <li>The very last List Item</li>
+            </ol>
+          </div>
+        </div>
+        <h2>Definition List:</h2>
+        <div class="grid">
+          <div class="grid-cell">
+            <dl>
+              <dt>
+                <dfn>Definiton List</dfn>
+              </dt>
+              <dd>A number of connected items or names written or printed consecutively, typically one below the other.</dd>
+              <dt>
+                <dfn>This is a Term</dfn>
+              </dt>
+              <dd>This is the definition of that term, which both live in a dl.</dd>
+              <dt>
+                <dfn>Definiton List</dfn>
+              </dt>
+              <dd>A number of connected items or names written or printed consecutively, typically one below the other.</dd>
+              <dt>
+                <dfn>This is a Term</dfn>
+              </dt>
+              <dd>This is the definition of that term, which both live in a dl.</dd>
+            </dl>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- /Typography -->
+    <!-- Spacing -->
+    <section class="block" id="spacing">
+      <header>
+        <h1>Spacing</h1>
+      </header>
+      <article>
+        <div class="grid">
+          <div class="grid-cell">
+            <div class="spacing xs">
+              &nbsp;
+            </div>
+            <strong>Spacing XS:</strong>
+            <br> 10px 0.625rem
+          </div>
+          <div class="grid-cell">
+            <div class="spacing sm">
+              &nbsp;
+            </div>
+            <strong>Spacing SM:</strong>
+            <br> 14px 0.875 $fontSize
+          </div>
+          <div class="grid-cell">
+            <div class="spacing base">
+              &nbsp;
+            </div>
+            <strong>Spacing Base:</strong>
+            <br> 21px 1.3125rem base Line Height
+          </div>
+          <div class="grid-cell">
+            <div class="spacing md">
+              &nbsp;
+            </div>
+            <strong>Spacing MD:</strong>
+            <br> 42px 2.625rem
+          </div>
+          <div class="grid-cell">
+            <div class="spacing lg">
+              &nbsp;
+            </div>
+            <strong>Spacing LG:</strong>
+            <br> 64px 4rem
+          </div>
+          <div class="grid-cell">
+            <div class="spacing xl">
+              &nbsp;
+            </div>
+            <strong>Spacing XL:</strong>
+            <br> 84px 5.25rem
+          </div>
+          <div class="grid-cell">
+            <div class="spacing xxl">
+              &nbsp;
+            </div>
+            <strong>Spacing XXL:</strong>
+            <br> 105px 6.5625rem
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- /Spacing -->
+    <!-- Grid -->
+    <section class="block full" id="grid">
+      <header>
+        <h1>Flexbox Based Grid</h1>
+        <p>This grid is still a work in process. It is based off of a couple of grids. But mainly from <a href="#">Solved by Flexbox</a></p>
       </header>
       <article>
         <div class="grid test">
@@ -181,127 +710,114 @@
       </article>
     </section>
     <!-- /Grid -->
-    <!-- Typography -->
-    <section class="block full">
+    <!-- Shadows -->
+    <section class="block" id="shadows">
       <header>
-        <h1>Typography</h1>
-        <small>Typographic Styles. Sizes & Units come from <a href="http://www.gridlover.net/app/">Gridlover.net</a></small>
+        <h1>Z-Index & Shadows</h1>
       </header>
       <article>
-        <div class="grid">
-          <div class="grid-half">
-            <h3>Font Properties</h3>
-            <hr>
-            <script src="https://gist.github.com/stewarthines/aae1f893a28bdf0bf2b0.js"></script>
-          </div>
+        <h2>Normal Shadows</h2>
+        <div class="grid text-center">
           <div class="grid-cell">
-            <h3>Basic Text</h3>
-            <hr>
-            <p>
-              Pitchfork Odd Future literally, pop-up before they sold out ethical hoodie irony Carles blog keffiyeh gentrify. Shabby chic semiotics four loko street art, ethical Brooklyn Godard Pitchfork kitsch forage selfies vegan artisan butcher flannel.
-            </p>
-          </div>
-          <div class="grid-cell">
-            <h3>Links & Styled Text</h3>
-            <hr>
-            <a href="#">An href link</a>
-            <br>
-            <strong>Strong Text</strong>
-            <br>
-            <em>Emphisised Text</em>
-            <br>
-            <small>Small Text</small>
-          </div>
-        </div>
-        <div class="grid">
-          <div class="grid-half">
-            <h3>Headings</h3>
-            <hr>
-            <h1>h1 Headline
-              <small class="text-muted">(2.75rem | 44px)</small>
-            </h1>
-            <h2>h2
-              <small class="text-muted">(1.9275rem | 31px)</small>
-            </h2>
-            <h3>h3 Title -
-              <small class="text-muted">(1.25rem | 22px)</small>
-            </h3>
-            <h4>h4 SubTitle -
-              <small class="text-muted">(1rem | 16px)</small>
-            </h4>
-          </div>
-          <div class="grid-cell">
-            <h3>Lists</h3>
-            <hr>
-            <div class="grid">
-              <div class="grid-cell">
-                <ol>
-                  <li>
-                    <strong>Ordered</strong>
-                  </li>
-                  <li>list Item</li>
-                  <li>list Item</li>
-                  <li>list Item</li>
-                </ol>
-              </div>
-              <div class="grid-cell">
-                <ul>
-                  <li>
-                    <strong>Unordered</strong>
-                  </li>
-                  <li>list Item</li>
-                  <li>list Item</li>
-                  <li>list Item</li>
-                </ul>
-              </div>
-              <div class="grid-cell">
-                <ul class="no-style">
-                  <li>
-                    <strong>No Style</strong>
-                  </li>
-                  <li>list Item</li>
-                  <li>list Item</li>
-                  <li>list Item</li>
-                </ul>
-              </div>
+            <div class="shadow z1">
+              &nbsp;
             </div>
-            <h3>Block Quotes</h3>
-            <hr>
-            <blockquote>
-              "This is only a quote"
-            </blockquote>
+            <strong>Z-1 Shadow</strong>
+          </div>
+          <div class="grid-cell">
+            <div class="shadow z2">
+              &nbsp;
+            </div>
+            <strong>Z-2 Shadow</strong>
+          </div>
+          <div class="grid-cell">
+            <div class="shadow z3">
+              &nbsp;
+            </div>
+            <strong>Z-3 Shadow</strong>
+          </div>
+          <div class="grid-cell">
+            <div class="shadow z4">
+              &nbsp;
+            </div>
+            <strong>Z-4 Shadow</strong>
+          </div>
+          <div class="grid-cell">
+            <div class="shadow z5">
+              &nbsp;
+            </div>
+            <strong>Z-5 Shadow</strong>
           </div>
         </div>
-        <div class="grid">
+        <h2>Inset Shadows</h2>
+        <div class="grid text-center">
           <div class="grid-cell">
-            <h3>Text States</h3>
-            <hr>
-            <ul class="no-style">
-              <li class="text-action">Action</li>
-              <li class="text-danger">Danger</li>
-              <li class="text-success">Success</li>
-              <li class="text-warning">Warning</li>
-              <li class="text-muted">Muted</li>
-            </ul>
+            <div class="shadow inset-z1">
+              &nbsp;
+            </div>
+            <strong>Inset Z-1</strong>
           </div>
           <div class="grid-cell">
-            <h3>Text On States</h3>
-            <hr>
-            <ul class="no-style">
-              <li class="action" style="padding:5px 0; text-indent:5px; border-radius:4px; margin-top:12px">Text on Action</li>
-              <li class="danger" style="padding:5px 0; text-indent:5px; border-radius:4px; margin-top:12px">Text on Danger</li>
-              <li class="success" style="padding:5px 0; text-indent:5px; border-radius:4px; margin-top:12px">Text on Success</li>
-              <li class="warning" style="padding:5px 0; text-indent:5px; border-radius:4px; margin-top:12px">Text on Warning</li>
-              <li class="muted" style="padding:5px 0; text-indent:5px; border-radius:4px; margin-top:12px">Text on Gray BG</li>
-            </ul>
+            <div class="shadow inset-z2">
+              &nbsp;
+            </div>
+            <strong>Inset Z-2</strong>
+          </div>
+          <div class="grid-cell">
+            <div class="shadow inset-z3">
+              &nbsp;
+            </div>
+            <strong>Inset Z-3</strong>
+          </div>
+          <div class="grid-cell">
+            <div class="shadow inset-z4">
+              &nbsp;
+            </div>
+            <strong>Inset Z-4</strong>
+          </div>
+          <div class="grid-cell">
+            <div class="shadow inset-z5">
+              &nbsp;
+            </div>
+            <strong>Inset Z-5</strong>
+          </div>
+        </div>
+        <h2>Top Shadows</h2>
+        <div class="grid text-center">
+          <div class="grid-cell">
+            <div class="shadow top-z1">
+              &nbsp;
+            </div>
+            <strong>Top Z-1</strong>
+          </div>
+          <div class="grid-cell">
+            <div class="shadow top-z2">
+              &nbsp;
+            </div>
+            <strong>Top Z-2</strong>
+          </div>
+          <div class="grid-cell">
+            <div class="shadow top-z3">
+              &nbsp;
+            </div>
+            <strong>Top Z-3</strong>
+          </div>
+          <div class="grid-cell">
+            <div class="shadow top-z4">
+              &nbsp;
+            </div>
+            <strong>Top Z-4</strong>
+          </div>
+          <div class="grid-cell">
+            <div class="shadow top-z5">
+              &nbsp;
+            </div>
+            <strong>Top Z-5</strong>
           </div>
         </div>
       </article>
-      <footer>
-        <small>Full Block Footer</small>
-      </footer>
     </section>
-    <!-- /Typography -->
+    <!-- /Shadows -->
     <!-- Block Half -->
     <section class="block">
       <header>
@@ -350,7 +866,124 @@
         </div>
       </article>
     </section>
-    <!-- /Block Half -->
+    <!-- /Forms -->
+    <!-- Images & Icons -->
+    <section class="block" id="imgs">
+      <header>
+        <h1>Images & Icons</h1>
+      </header>
+
+      <article>
+        <h2>SVG Icons</h2>
+        <div class="dark placeholder">
+          <div class="grid-cell">
+            <img src="img/icon_messages.svg" alt="Your Messages">
+            <br>
+            <strong>Messages</strong>
+          </div>
+          <div class="grid-cell">
+            <img src="img/icon_messages_new.svg" alt="Your Messages">
+            <br>
+            <strong>New Messages</strong>
+          </div>
+          <div class="grid-cell">
+            <img src="img/icon_search.svg" alt="Search NotaFi">
+            <br>
+            <strong>Search</strong>
+          </div>
+          <div class="grid-cell">
+            <img src="img/icon_universities.svg" alt="List Universities">
+            <br>
+            <strong>Universities</strong>
+          </div>
+          <div class="grid-cell">
+            <img src="img/notafi_logo_white.svg" alt="List Universities">
+            <br>
+            <strong>NotaFi Logo White</strong>
+          </div>
+        </div>
+        <h3>Card List SVGs</h3>
+        <div class="placeholder">
+          <div class="grid-cell">
+            <img src="img/icons_timeline_endorse.svg" alt="Something was endorsed">
+            <br>
+            <strong>Timeline Endorse</strong>
+          </div>
+          <div class="grid-cell">
+            <img src="img/icons_timeline_event.svg" alt="An Event was shared">
+            <br>
+            <strong>Timeline Event</strong>
+          </div>
+          <div class="grid-cell">
+            <img src="img/icons_timeline_message.svg" alt="A new message">
+            <br>
+            <strong>Timeline Message</strong>
+          </div>
+          <div class="grid-cell">
+            <img src="img/icons_timeline_notafi.svg" alt="NotaFi update">
+            <br>
+            <strong>Timeline NotaFi</strong>
+          </div>
+          <div class="grid-cell">
+            <img src="img/icons_timeline_update.svg" alt="Something was updated">
+            <br>
+            <strong>Timeline Update</strong>
+          </div>
+        </div>
+
+        <h2 style="flex:0 0 100%">Material Icons</h2>
+        <br>
+        <p>We'll be using Google's Material Icons for this project. <a href="https://www.google.com/design/icons/">You can find them here.</a> <strong class="text-danger">DO NOT</strong> use font-awesome in this project. The icon style won't match. Stew will try to have the pages mocked so you don't have to pick icons on your own. Below you'll find all the icons currently in the project.</p>
+        <div class="placeholder">
+          <div class="grid-cell">
+            <i class="material-icons">favorite</i>
+            <br>
+            <strong>favorite</strong>
+          </div>
+          <div class="grid-cell">
+            <i class="material-icons">reply</i>
+            <br>
+            <strong>Reply</strong>
+          </div>
+          <div class="grid-cell">
+            <i class="material-icons">assessment</i>
+            <br>
+            <strong>Assessment</strong>
+          </div>
+          <div class="grid-cell">
+            <i class="material-icons">settings</i>
+            <br>
+            <strong>Settings</strong>
+          </div>
+          <div class="grid-cell">
+            <i class="material-icons">lock</i>
+            <br>
+            <strong>Lock</strong>
+          </div>
+          <div class="grid-cell">
+            <i class="material-icons">person</i>
+            <br>
+            <strong>Person</strong>
+          </div>
+          <div class="grid-cell">
+            <i class="material-icons">event</i>
+            <br>
+            <strong>Event</strong>
+          </div>
+          <div class="grid-cell">
+            <i class="material-icons">message</i>
+            <br>
+            <strong>message</strong>
+          </div>
+          <div class="grid-cell">
+            <i class="material-icons">mail</i>
+            <br>
+            <strong>mail</strong>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- /Images & Icons  -->
   </main>
   <footer role="footer">
     <p>This is the footer</p>

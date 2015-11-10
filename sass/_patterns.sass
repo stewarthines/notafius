@@ -1,0 +1,136 @@
+// Styles for the Pattern Library
+//===============================
+
+=sample($varHeight:$spacingLG, $varWidth:$spacingLG, $varBG:white, $varShadow:$z1-shadow)
+  height: $varHeight
+  width: $varWidth
+  background:$varBG
+  box-shadow:$varShadow
+  border-radius:$borderRadius
+  margin:0 auto
+  margin-bottom:$spacingBase
+
+// Colors
+.color
+  +sample()
+
+
+// Shades of Gray
+.bg-gray06
+  background:$gray06
+.bg-gray17
+  background:$gray17
+.bg-gray28
+  background:$gray28
+.bg-gray39
+  background:$gray39
+.bg-gray50
+  background:$gray50
+.bg-gray61
+  background:$gray61
+.bg-gray72
+  background:$gray72
+.bg-gray83
+  background:$gray83
+.bg-gray94
+  background:$gray94
+.bg-gray100
+  background:$gray100
+.bg-brandGrayA
+  background:$brandGrayA
+.bg-brandGrayB
+  background:$brandGrayB
+
+// Brand Colors
+.bg-brandBase
+  background:$brandBase
+.bg-brandAlt
+  background:$brandAlt
+.bg-brandDark
+  background:$brandDark
+
+// Action Colors
+.bg-action
+  background:$action
+.bg-danger
+  background:$danger
+.bg-success
+  background:$success
+.bg-warning
+  background:$warning
+
+// Spacing
+.spacing
+  +sample($varBG:#EB1460)
+  &.xs
+    height:$spacingXS
+    width:$spacingXS
+  &.sm
+    height:$spacingSM
+    width:$spacingSM
+  &.base
+    height:$spacingBase
+    width:$spacingBase
+  &.md
+    height:$spacingMD
+    width:$spacingMD
+  &.lg
+    height:$spacingLG
+    width:$spacingLG
+  &.xl
+    height:$spacingXL
+    width:$spacingXL
+  &.xxl
+    height:$spacingXXL
+    width:$spacingXXL
+
+// Shadows
+.shadow
+  +sample()
+  &.z1
+    box-shadow:$z1-shadow
+  &.z2
+    box-shadow:$z2-shadow
+  &.z3
+    box-shadow: $z3-shadow
+  &.z4
+    box-shadow: $z4-shadow
+  &.z5
+    box-shadow: $z5-shadow
+  &.inset-z1
+    box-shadow: $z1-insetShadow
+  &.inset-z2
+    box-shadow: $z2-insetShadow
+  &.inset-z3
+    box-shadow: $z3-insetShadow
+  &.inset-z4
+    box-shadow: $z4-insetShadow
+  &.inset-z5
+    box-shadow: $z5-insetShadow
+  &.top-z1
+    box-shadow: $top-z1-shadow
+  &.top-z2
+    box-shadow: $top-z2-shadow
+  &.top-z3
+    box-shadow: $top-z3-shadow
+  &.top-z4
+    box-shadow: $top-z4-shadow
+  &.top-z5
+    box-shadow: $top-z5-shadow
+
+.placeholder
+  @extend .grid
+  +sample()
+  align-items: baseline
+  width:100%
+  height:auto
+  box-shadow:none
+  background:transparent
+  text-align:center
+  padding:$spacingBase
+  img
+    margin-bottom:$spacingSM
+  &.dark
+    background:$brandGrayB
+    color:$gray17
+    box-shadow:$z1-shadow

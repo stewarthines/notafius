@@ -1,36 +1,53 @@
 .profile-wrapper
   position: relative
   display:flex
+  flex-wrap:wrap
   margin:0 auto
   margin-top:56px
   margin-bottom:$spacingMD
+  width:90%
   max-width:64rem
 
+  @media screen and (max-width:$bpSM)
+    width:100%
+    margin-top:55px
+    background:red
 
-.profile-side
-  flex: 0 0 13.875rem
+  @media screen and (min-width:$bpMD)
+    max-width:72rem
+
+
+.col-left
+  flex: 0 0 23%
   order:1
   margin:$spacingBase
   margin-left:0
   +card
   padding:0
 
-.profile-main
-  flex: 0 0 29.25rem
+  @media screen and (max-width:$bpSM)
+    flex: 0 0 100%
+    margin:0
+    border-radius:0
+
+
+.col-middle
+  flex: 0 0 50%
   order:2
   margin-right:$spacingBase
-  background:white
-  +card
-  padding:0
-  border-left:1px solid $borderColor
-  border-right:1px solid $borderColor
-  border-top-left-radius: 0
-  border-top-right-radius: 0
 
-.profile-secondary
+  @media screen and (max-width:$bpSM)
+    flex:0 0 100%
+
+.col-right
   padding-top:$spacingBase
-  flex: 0 0 13.875rem
+  flex: 0 0 23%
   order:3
+
+  @media screen and (max-width:500px)
+    display:none
+    visibility: hidden
+
   .card
     height:13.875rem
     margin-bottom:$spacingBase
@@ -42,10 +59,13 @@
   padding-top:$spacingMD
   color:white
   text-align:center
-  // text-shadow: $z1-shadow
   background:$brandAlt
   border-top-left-radius: $borderRadius
   border-top-right-radius: $borderRadius
+
+
+  @media screen and (max-width:$bpSM)
+    border-radius:0
 
   img
     display:block
