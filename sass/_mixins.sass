@@ -13,12 +13,21 @@ $btnFontSize:$fontSize
 // = = = = 1. Grid = = = = //
 //- - A. Grid Container - - //
 %grid
+  position: relative
   display:flex
-  felx-direction:row
+  flex-direction:row
   flex-wrap:wrap
-  width:100%
-  max-width:$containerWidth
   margin:0 auto
+
+  @media screen and (max-width:670px)
+    width:100%
+
+  @media screen and (min-width:671px) and (max-width:1024px)
+    width:95%
+
+  @media screen and (min-width:1025px)
+    width:90%
+    max-width:$containerWidth
 
   &.align-top
     align-items: flex-start
@@ -27,8 +36,6 @@ $btnFontSize:$fontSize
   &.align-center
     align-items:center
 
-  @media screen and (max-width:$bpSM)
-    width:90%
 
 // - - B. Grid Cell - - //
 %gridCell
@@ -62,7 +69,7 @@ $btnFontSize:$fontSize
 =btnBasic($varBtnBG:$btnBG, $varBtnFont:$btnFontColor, $varBtnBorder:$borderColor)
     display:inline-block
     margin-bottom: $spacingBase
-    height:$formHeight
+
     max-height:$formHeight
     padding:$elementPadding $spacingSM
     color: $varBtnFont

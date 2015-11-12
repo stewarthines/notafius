@@ -1,78 +1,81 @@
+$headerHeight:$spacingLG
+
+=menuItem()
+  flex: 0 0 $headerHeight
+  height: $headerHeight
+  text-align:center
+  vertical-align: center
+  line-height:$spacingLG
+  cursor: pointer
+  &:hover
+    background:$brandGrayA
+
+
+
+
 header[role="banner"]
-    position: relative
-    display: flex
-    align-content: center
-    z-index: 1000
-    width:100%
-    background: $brandGrayB
-    padding:$spacingXS 0
-    box-shadow: $z1-shadow
+  position: relative
+  display: flex
+  align-content: center
+  z-index: 1000
+  width:100%
+  background: $brandGrayB
+  box-shadow: $z1-shadow
+  line-height:$spacingLG
+  min-height:$headerHeight
 
-    nav
-      @extend %grid
-      align-items: center
-      justify-content: center
 
-    .brand,
-    .barnd h1,
-    ul
-        @extend %cell
-        align-self:center
-        margin:0
-        padding:0
+  nav
+    @extend %grid
+    align-items: center
 
-    .brand,
-    .brand h1
-        @extend %heading
-        @extend %gridHalf
-        align-self:center
-        order:1
-        margin:0
-        padding:0
-
+    .brand
+      +menuItem
+      order:1
 
     .menu
-      @extend %gridHalf
+      flex:auto
       order:2
-      text-align:right
+      ul
+        @extend %no-style
+        display:flex
+        align-items: center
+        justify-content: flex-end
 
-    .menu ul
-      li
-        display:inline
-      @media screen and (max-width:$bpSM)
-        position: absolute
-        top:-1000px
-        position:absolute
-        z-index: 800
-        left:0
-        right:0
-        display:block
-        width:100%
-        text-align:center
-        transition: top 300ms ease-in-out
         li
-          display:block
-          background:$gray06
-          width:100%
-          padding:$spacingSM 0
-          border-bottom:1px solid $borderColor
-          box-shadow:$z1-shadow
-        .divder
-          display:none
-        &.show
-          top:5rem
-          z-index: 800
-          transition: top 300ms ease-in-out
+          +menuItem
 
-    .mobile-menu
+.menu li.user
+  flex: 0 1 auto !important
+  align-self: flex-end
+  display:flex
+  align-items: center
+
+  .avatar
+    max-height:$spacingMD
+    max-width:$spacingMD
+    border-radius:50%
+    margin-right:$spacingSM
+
+  .material-icons
+    color:$brandBase
+
+  @media screen and (max-height:$bpSM)
+    flex:0 0 $headerHeight !important
+    .user-info,
+    .material-icons
       display:none
-      visibility: hidden
-      align-self:center
-      cursor: pointer
-      color:$action
-      @media screen and (max-width:$bpSM)
-        display: inline-block
-        visibility: visible
+
+.menu li.user .user-info
+  color:white
+  text-align:left
+  line-height:$spacingBase
+  font-weight:600
+  span
+    color:$brandBase
+
+
+
 
 // Fixed Header
 header[role="banner"].fixed

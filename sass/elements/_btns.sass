@@ -62,8 +62,26 @@ input.brand-alt[type="submit"]
   +btnBasic($gray100, white, darken($gray100,10%))
   text-shadow:none
 
+.btn.clear,
+a.btn.clear,
+button.clear,
+button.btn.clear,
+input.clear[type="submit"]
+  +btnBasic(transparent, $action, $gray06 )
+  text-shadow:none
+  box-shadow:none
+  border:none
+
+  &:hover
+    box-shadow:none
+    color:darken($action,10)
+
 
 // = = = = 2. Button Icons = = = =//
 // I'm using Google's Material Icons. This will probably change per icon
 .btn .material-icons
     vertical-align:middle
+
+// = = = = 3. Button Mods = = = = //
+.btn.full
+  width:100%

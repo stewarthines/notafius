@@ -1,0 +1,42 @@
+// Tabs
+
+nav.tabs ul
+  @extend %no-style
+
+  li
+    display:flex
+    align-items: center
+    height:$spacingMD
+    font-weight:800
+    color:$brandAlt
+    text-indent: $spacingSM
+    border-right:inset $spacingXS transparent
+    cursor: pointer
+
+    &:hover
+      background:$gray06
+      border-color:$borderColor
+
+    &.active
+      border-color:$brandAlt
+      cursor: default
+      &:hover
+        background:white
+        border-color:$brandAlt
+
+  @media screen and (max-width:670px)
+    max-height:$spacingLG
+    display:flex
+    flex-direction: row
+    // flex-wrap:nowrap
+    justify-content: flex-start
+    align-items: center
+    overflow-x: auto
+
+    li
+      flex: 0 0 auto
+      text-align:center
+      padding:0 $spacingBase
+      border-bottom:5px solid transparent
+      border-right:none
+      text-indent:0

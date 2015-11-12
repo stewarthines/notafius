@@ -8,6 +8,9 @@
   cursor: pointer
 
 
+
+
+
 // = = = = 1. Basic Card Styles & Elements = = = = //
 .card,
 .card-list li
@@ -29,11 +32,16 @@
       flex: auto
   // 1.B Card Body
   .card-body
-    padding: 0 $spacingSM
-    p
-      margin:0
+    padding: 0
+
+    *
+      margin:$spacingSM
+
     img
       display:block
+      padding:0
+      margin-left:0
+      margin-right:0
       width:100%
       max-width:100%
   // 1.C Card Footer
@@ -53,6 +61,7 @@
 // - - A. Card Lists - - //
 .card-list
   @extend .no-style
+  list-style:none
   margin:0
 
   li
@@ -69,5 +78,4 @@
 
   &:hover
     transform:scale(1.02)
-    box-shadow:$z2-shadow
     transition:transform 150ms ease-in-out, box-shadow 150ms ease-in-out

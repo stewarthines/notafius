@@ -1,0 +1,31 @@
+// List Items
+
+.updatebox
+  padding:$spacingSM
+  padding-top:$spacingBase
+  background:#F0F0F0
+  box-shadow:$z1-shadow
+
+  textarea
+    margin-bottom:0
+
+.update-actions
+  @extend %grid
+  margin:0
+  padding:0
+  width:100%
+  align-content:center
+  aling-items:center
+  justify-content: space-between
+
+  a.btn
+    margin-bottom:0
+
+  .submit
+    order:2
+    align-self: flex-end
+
+  @media screen and (max-width:670px)
+    span
+      display:none
+      visibility: hidden

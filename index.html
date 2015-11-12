@@ -32,23 +32,26 @@
         </h1>
       </div>
       <div class="menu">
-        <div class="mobile-menu">
-          <i class="material-icons">menu</i>
-        </div>
         <ul>
           <li>
-            <a href="#">
-              <img src="img/icon_search.svg" alt="Search NotaFi">
+            <img src="img/icon_search.svg" alt="Search NotaFi">
           </li>
           <li>
-            <a href="#">
-              <img src="img/icon_universities.svg" alt="Find Universities">
+            <img src="img/icon_universities.svg" alt="Find Universities">
           </li>
           <li>
-            <a href="#">
-              <img src="img/icon_messages_new.svg" alt="Your Inbox">
+            <img src="img/icon_messages_new.svg" alt="Your Inbox">
           </li>
-          <li><a href="#">User Name</a></li>
+          <li class="user">
+            <img class="avatar" src="img/stoops_120.png" alt="Current Username">
+            <div class="user-info">
+              Bob Stoops
+              <br>
+              <span>The University of Oklahoma</span>
+            </div>
+            <i class="material-icons">arrow_drop_down</i>
+
+          </li>
         </ul>
       </div>
     </nav>
@@ -56,47 +59,62 @@
   <!-- /Global Header -->
   <main class="fixed-header" role="main">
     <!-- Profile Layout -->
+
     <section class="profile-wrapper">
-
       <div class="col-left">
-        <header class="profile-header">
-          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/orbuch/128.jpg" alt="">
-          <strong>
-            Roger Matthews
-            <br />
-            <small>Weatherford High School</small>
-          </strong>
-        </header>
-        <nav>
-          <ul>
-            <li>Profile</li>
-            <li>Feed</li>
-            <li>Accademics</li>
-            <li>Activities</li>
-            <li>Events</li>
-          </ul>
-        </nav>
+        <div class="col-left-inner">
+          <header class="profile-header">
+            <img src="http://i2.cdn.turner.com/cnnnext/dam/assets/150918183434-09-black-beard-starz-small-11.jpg" alt="">
+            <strong>
+              Edward Teach
+              <br />
+              <small>Republic of Pirates - Nassau</small>
+            </strong>
+          </header>
+          <nav class="tabs">
+            <ul>
+              <li>Profile</li>
+              <li class="active">Feed</li>
+              <li>Accademics</li>
+              <li>Activities</li>
+              <li>Events</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="contact">
+          <button class="btn full brand-alt">Watch</button>
+          <button class="btn full brand">Contact</button>
+        </div>
       </div>
-
       <div class="col-middle">
         <header class="updatebox">
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <textarea name="" id="" cols="30" rows="10" placeholder="Post an update"></textarea>
           <br>
-
+          <div class="update-actions">
+            <div>
+              <a class="btn clear" href=""><i class="material-icons">camera_alt</i> <span class="hidden-xs"> Media</span></a>
+              <a class="btn clear" href=""><i class="material-icons">event</i> <span class="hidden-xs">Event</span></a>
+              <a class="btn clear" href=""><i class="material-icons">insert_chart</i> <span class="hidden-xs">Stats</span></a>
+            </div>
+            <div class="submit text-right">
+              <a class="btn brand submit" href=""><i class="material-icons">question_answer</i></a>
+            </div>
+          </div>
         </header>
         <article>
           <ul class="card-list">
             <li>
               <header>
-                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/madysondesigns/128.jpg" alt="">
+                <img src="https://lh3.googleusercontent.com/-GKKGfeW7FmI/AAAAAAAAAAI/AAAAAAAAADY/HQzIFXm21I4/s120-c/photo.jpg" alt="">
                 <div class="header-content">
-                  <a href="#">Sarah Whinnem</a>
+                  <a href="#">Edward Kenway</a>
                   <br>
-                  <small>This is some more info</small>
+                  <small>November 11</small>
                 </div>
               </header>
               <div class="card-body">
-                <p>Running down to Cuba with a load of sugar, Weigh, me boys, to Cuba! Make her run you, lime juice squeezes, Running down to Cuba. O, I got a sister, she's nine feet tall, Weigh, me boys, to Cuba! Sleeps in the kitchen with her feet in the hall.Running down to Cuba.</p>
+                <p>Running down to Cuba with a load of sugar, Weigh, me boys, to Cuba! Make her run you, lime juice squeezes, Running down to Cuba. O, I got a sister, she's nine feet tall, Weigh, me boys, to Cuba! Sleeps in the kitchen with her feet in the
+                  hall.Running down to Cuba.</p>
               </div>
               <footer>
                 <div class="card-footer-btn">
@@ -108,24 +126,25 @@
               </footer>
             </li>
             <li class="card-notification">
-              <header>.
-                <img src="img/icons_timeline_update.svg" alt="New Update">
+              <header>
+                <img src="img/icons_timeline_endorse.svg" alt="New Update">
                 <div class="card-header-content">
-                  <strong>Here</strong> is a single line update!
+                  <a href="">Woods Rogers</a> endorsed Edward for <em>Looting & Plundering</em>
                 </div>
               </header>
             </li>
             <li>
               <header>
-                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/madysondesigns/128.jpg" alt="">
+                <img src="http://i2.cdn.turner.com/cnnnext/dam/assets/150918183434-09-black-beard-starz-small-11.jpg" alt="">
                 <div class="header-content">
-                  <a href="#">Sarah Whinnem</a>
+                  <a href="#">Edward Teach</a>
                   <br>
-                  <small>This is some more info</small>
+                  <small>November 10</small>
                 </div>
               </header>
               <div class="card-body">
-                <img src="https://c1.staticflickr.com/1/486/19326287682_47155143c2_h.jpg" alt="Hudson">
+                <p>Here be a model of me own ship. She be called The Queen Anne's Revenge. Many 'a sacking and plundering has she done.</p>
+                <img src="http://www.modelshipmaster.com/products/tall_ships/blackbeard%20pirate%203'%20long/blackbeard2.JPG" alt="Hudson">
               </div>
               <footer>
                 <div class="card-footer-btn">
@@ -169,7 +188,8 @@
                 </div>
               </header>
               <div class="card-body">
-                <p>Running down to Cuba with a load of sugar, Weigh, me boys, to Cuba! Make her run you, lime juice squeezes, Running down to Cuba. O, I got a sister, she's nine feet tall, Weigh, me boys, to Cuba! Sleeps in the kitchen with her feet in the hall.Running down to Cuba.</p>
+                <p>Running down to Cuba with a load of sugar, Weigh, me boys, to Cuba! Make her run you, lime juice squeezes, Running down to Cuba. O, I got a sister, she's nine feet tall, Weigh, me boys, to Cuba! Sleeps in the kitchen with her feet in the
+                  hall.Running down to Cuba.</p>
               </div>
               <footer>
                 <div class="card-footer-btn">
@@ -183,7 +203,8 @@
           </div>
           <div class="grid-cell">
             <h3>Basic Cards</h3>
-            <p>Cards have 3 zones. Headers, bodies, and footers. The header contains information about the person who is conected to the card. The body can hold a varaity of information and media. The footer is where card actions go. Unless it's a notification card. You simply click or tap those.</p>
+            <p>Cards have 3 zones. Headers, bodies, and footers. The header contains information about the person who is conected to the card. The body can hold a varaity of information and media. The footer is where card actions go. Unless it's a notification
+              card. You simply click or tap those.</p>
           </div>
         </div>
         <div class="grid">
@@ -203,7 +224,8 @@
                   </div>
                 </header>
                 <div class="card-body">
-                  <p>Running down to Cuba with a load of sugar, Weigh, me boys, to Cuba! Make her run you, lime juice squeezes, Running down to Cuba. O, I got a sister, she's nine feet tall, Weigh, me boys, to Cuba! Sleeps in the kitchen with her feet in the hall.Running down to Cuba.</p>
+                  <p>Running down to Cuba with a load of sugar, Weigh, me boys, to Cuba! Make her run you, lime juice squeezes, Running down to Cuba. O, I got a sister, she's nine feet tall, Weigh, me boys, to Cuba! Sleeps in the kitchen with her feet in
+                    the hall.Running down to Cuba.</p>
                 </div>
                 <footer>
                   <div class="card-footer-btn">
@@ -634,6 +656,21 @@
       </article>
     </section>
     <!-- /Spacing -->
+    <section class="block">
+      <div class="grid">
+        <div class="gird-cell">
+          <h3>item one</h3>
+        </div>
+        <div class="gird-cell">
+          <h3>item two</h3>
+        </div>
+        <div class="gird-cell">
+          <h3>item three</h3>
+        </div>
+      </div>
+    </section>
+
+
     <!-- Grid -->
     <section class="block full" id="grid">
       <header>
@@ -642,6 +679,18 @@
       </header>
       <article>
         <div class="grid test">
+          <div class="grid-cell">
+            <h3>Grid Cell (auto)</h3>
+          </div>
+          <div class="grid-cell">
+            <h3>Grid Cell (auto)</h3>
+          </div>
+          <div class="grid-cell">
+            <h3>Grid Cell (auto)</h3>
+          </div>
+          <div class="grid-cell">
+            <h3>Grid Cell (auto)</h3>
+          </div>
           <div class="grid-cell">
             <h3>Grid Cell (auto)</h3>
           </div>
@@ -933,7 +982,8 @@
 
         <h2 style="flex:0 0 100%">Material Icons</h2>
         <br>
-        <p>We'll be using Google's Material Icons for this project. <a href="https://www.google.com/design/icons/">You can find them here.</a> <strong class="text-danger">DO NOT</strong> use font-awesome in this project. The icon style won't match. Stew will try to have the pages mocked so you don't have to pick icons on your own. Below you'll find all the icons currently in the project.</p>
+        <p>We'll be using Google's Material Icons for this project. <a href="https://www.google.com/design/icons/">You can find them here.</a>
+          <strong class="text-danger">DO NOT</strong> use font-awesome in this project. The icon style won't match. Stew will try to have the pages mocked so you don't have to pick icons on your own. Below you'll find all the icons currently in the project.</p>
         <div class="placeholder">
           <div class="grid-cell">
             <i class="material-icons">favorite</i>

@@ -1,0 +1,34 @@
+.col-left
+  @extend %gridFourth
+  order:1
+  margin-top:$spacingBase
+
+  // Small Media
+  @media screen and (max-width:670px)
+    flex: 0 0 100%
+    margin:0
+
+  // Medium Media
+  @media screen and (min-width:671px) and (max-width:768px)
+    flex: 0 0 31.45%
+    margin-right:$gridGutter
+
+  .col-left-inner
+    +card()
+    padding:0
+
+  .contact
+    @extend %grid
+    margin-top:$spacingBase
+
+  button
+    @extend %gridCell
+
+  @media screen and (max-width:670px)
+    .contact
+      max-width:95%
+
+    button
+      flex: 0 0 48% !important
+      margin-right:2%
+      
